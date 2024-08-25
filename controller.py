@@ -1,4 +1,5 @@
 import customtkinter as ctk
+import tkinter as tk
 from tkinter import messagebox
 from model import AppModel
 from views import Page1, Page2
@@ -34,7 +35,7 @@ class AppController(ctk.CTk):
         # 起動時にPage1Frameを表示する。
         self.show_frame("Page1")
 
-    def show_frame(self, page_name):
+    def show_frame(self, page_name:str):
         '''ページ切替を行うメソッド'''
         frame = self.frames[page_name]
         frame.tkraise()
