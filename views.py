@@ -1,9 +1,16 @@
 import customtkinter as ctk
+import tkinter as tk
 
-class Page1(ctk.CTkFrame):
-    def __init__(self, master, controller, **kwargs):
+from typing import Any
+
+class Page(ctk.CTkFrame):
+    def __init__(self, master:ctk.CTk|tk.Tk, controller:Any, **kwargs):
         super().__init__(master, **kwargs)
         self.controller = controller
+        
+class Page1(Page):
+    def __init__(self, master:ctk.CTk, controller:Any, **kwargs):
+        super().__init__(master, controller, **kwargs)
 
         # Gridレイアウト設定
         self.grid_rowconfigure(0, weight=1)
@@ -18,10 +25,9 @@ class Page1(ctk.CTkFrame):
         self.msg_btn = ctk.CTkButton(self, text="メッセージ表示", command=lambda: controller.msg_output(1))
         self.msg_btn.grid(row=1, column=1, padx=(0,20))
 
-class Page2(ctk.CTkFrame):
-    def __init__(self, master, controller, **kwargs):
-        super().__init__(master, **kwargs)
-        self.controller = controller
+class Page2(Page):
+    def __init__(self, master:ctk.CTk, controller:Any, **kwargs):
+        super().__init__(master, controller, **kwargs)
 
         # Gridレイアウト設定
         self.grid_rowconfigure(0, weight=1)
