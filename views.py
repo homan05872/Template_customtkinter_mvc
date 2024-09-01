@@ -1,43 +1,33 @@
 import customtkinter as ctk
-import tkinter as tk
-
+from style_manager import StyleManager
 from typing import Any
-
-class Page(ctk.CTkFrame):
-    def __init__(self, master:ctk.CTk|tk.Tk, controller:Any, **kwargs):
-        super().__init__(master, **kwargs)
-        self.controller = controller
         
-class Page1(Page):
-    def __init__(self, master:ctk.CTk, controller:Any, **kwargs):
-        super().__init__(master, controller, **kwargs)
-
-        # Gridレイアウト設定
+class MainView(ctk.CTk):
+    def __init__(self, pages, controllers: dict[str, Any]) -> None:
+        super().__init__()
+        
+        # テーマ設定
+        ctk.set_appearance_mode("dark")  # Modes: system (default), light, dark
+        ctk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
+        
+        # Gridレイアウトの設定
         self.grid_rowconfigure(0, weight=1)
-        self.grid_columnconfigure((0,1), weight=1)
+        self.grid_columnconfigure(0, weight=1)
 
-        self.label = ctk.CTkLabel(self, text="ページ１です。")
-        self.label.grid(row=0, column=0, columnspan=2, pady=20)
-
-        self.page_btn = ctk.CTkButton(self, text="ページ２へ", command=lambda: controller.show_frame("Page2"))
-        self.page_btn.grid(row=1, column=0, padx=20)
+        self.title("MVC with Page Navigation")
+        self.geometry("1000x550")
         
-        self.msg_btn = ctk.CTkButton(self, text="メッセージ表示", command=lambda: controller.msg_output(1))
-        self.msg_btn.grid(row=1, column=1, padx=(0,20))
+        # ページのフレームを格納する辞書
+        self.pages:dict[str] = {}
 
-class Page2(Page):
-    def __init__(self, master:ctk.CTk, controller:Any, **kwargs):
-        super().__init__(master, controller, **kwargs)
-
-        # Gridレイアウト設定
-        self.grid_rowconfigure(0, weight=1)
-        self.grid_columnconfigure((0,1), weight=1)
-        
-        self.label = ctk.CTkLabel(self, text="ページ２です。")
-        self.label.grid(row=0, column=0, columnspan=2, pady=20)
-
-        self.page_btn = ctk.CTkButton(self, text="ページ１へ", command=lambda: controller.show_frame("Page1"))
-        self.page_btn.grid(row=1, column=0, padx=20)
-        
-        self.msg_btn = ctk.CTkButton(self, text="メッセージ表示", command=lambda: controller.msg_output(2))
-        self.msg_btn.grid(row=1, column=1, padx=(0,20))
+        # 各ページの作成と格納
+        for PageClass in pages:
+            page_name = PageClass.__name__
+            page = PageClass(master=self, controllers=controllers, **StyleManager.transparent_frame)
+            self.pages[page_name] = page
+            page.grid(row=0, column=0, sticky="nsew")
+    
+    def show_page(self, page_name:str) -> None:
+        '''ページ切替を行うメソッド'''
+        page = self.pages[page_name]
+        page.tkraise()
