@@ -1,5 +1,35 @@
 # Template_customtkinter_mvc
-mvcパターン開発のテンプレートです。
+customtkinterのmvcパターン開発のテンプレートです。
+
+## 環境
+- 言語:python
+- 外部モジュール：customtkinter
+- DB:sqlite3
+
+## アーキテクチャ
+ mvcパターンを採用しており、それぞれ下記のモジュールにそれぞれのクラスを定義します。
+ - ビュー：views.py & pages.py(Presentation Layer)
+ - コントローラ：controllers.py(Business Logic Layer)
+ - モデル：models.py(DataAccess Layer)
+
+![alt text](設計/images/アーキテクチャ図_architecture.png)
+
+## クラス
+クラス構成は下記のようになっております。
+
+| クラス名 | 種類 | 説明 | 備考 |
+| -- | -- | -- | -- |
+| MainViewクラス | ビュー | Pageクラスを管理 | ページの表示・遷移など |
+| Pageクラス | ビュー | 画面UIの生成 & UI更新担当 | 抽象クラス有 |
+| Contorllerクラス | コントローラ | ビジネスロジックを担当 |  |
+| Modelクラス | モデル | DB連携を担当 | 抽象クラス有 |
+
+![alt text](設計/images/クラス構成図_class.png)
+
+## モジュール構成
+基本的に作成した各クラスをmain.py(エントリポイント)で生成し、それぞれ書くクラス独立した状態を保ちつつ連携を行います。
+
+![alt text](設計/images/モジュール構成図_module.png)
 
 ## 使い方
 ※下記はmain.pyです。
@@ -70,4 +100,3 @@ class Page1(BasePage):
 ```
 
 ビューを更新するメソッドはこのPageクラスに定義する。
-

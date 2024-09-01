@@ -1,0 +1,34 @@
+@startuml name
+
+package "Presentation Layer" {
+    class MainView {
+        + Page1
+        + Page2
+    }
+
+    class Page1
+    class Page2
+}
+
+package "Business Logic Layer" {
+    class DiaryController {
+        + save_diary_entry()
+        + get_diary_list()
+        + navigate_to_page()
+    }
+}
+
+package "Data Access Layer" {
+    class DiaryModel {
+        + get_diary_list()
+        + save_diary_entry()
+    }
+}
+
+MainView --> DiaryController : "Calls"
+DiaryController --> DiaryModel : "Calls"
+
+MainView -> Page1 : "Navigates"
+MainView -> Page2 : "Navigates"
+
+@enduml
