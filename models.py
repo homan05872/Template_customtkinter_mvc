@@ -66,3 +66,28 @@ class DiaryModel(BaseModel):
                 # 接続を閉じる
                 self.close()
         return data
+
+# ****************************************************************************
+# 下記メソッドは現状使用なし 使い方の例です。
+# ****************************************************************************
+    def update_record(self, id: int, title: str, content: str) -> None:
+        '''Diaryテーブルの指定されたIDのレコードを更新するメソッド'''
+        try:
+            self.connect()
+            self.cursor.execute(f'UPDATE {self.t_diary} SET title = ?, content = ? WHERE id = ?', (title, content, id))
+            self.conn.commit()  # 変更を保存
+        except Exception as e:
+            print(f'Error: {e}')
+        finally:
+            self.close()
+    
+    def insert_record(self, title: str, content: str) -> None:
+        '''Diaryテーブルに新しいレコードを挿入するメソッド'''
+        try:
+            self.connect()
+            self.cursor.execute(f'INSERT INTO {self.t_diary} (title, content) VALUES (?, ?)', (title, content))
+            self.conn.commit()  # 変更を保存
+        except Exception as e:
+            print(f'Error: {e}')
+        finally:
+            self.close()

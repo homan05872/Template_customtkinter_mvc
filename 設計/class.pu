@@ -1,0 +1,57 @@
+@startuml
+
+' Define classes
+class MainView {
+    - pages: dict[str, BasePage]
+    + __init__(pages, controllers: dict[str, Any])
+    + show_page(page_name: str)
+}
+
+class DiaryController {
+    - view: BasePage
+    - diary_model: BaseModel
+    + __init__(diary_model: BaseModel)
+    + get_list_data(): str
+    + get_one(id: int): str
+}
+
+abstract BaseModel {
+    - conn: Optional[sqlite3.Connection]
+    - cursor: Optional[sqlite3.Cursor]
+    + connect()
+    + close()
+}
+
+class DiaryModel {
+    + get_all(): list[sqlite3.Row]
+}
+
+abstract BasePage {
+    + build_ui(): void <<abstract>>
+    + show_page(page_name: str): void
+}
+
+class Page1 {
+    - diary_controller: DiaryController
+    + __init__(master: ctk.CTk, controllers: dict[str, Any])
+    + build_ui(): void
+    + msg_output(page_num: int): void
+}
+
+class Page2 {
+    - diary_controller: DiaryController
+    + __init__(master: ctk.CTk, controllers: dict[str, Any])
+    + build_ui(): void
+    + msg_output(page_num: int): void
+}
+
+' Define relationships
+MainView --> "0..*" BasePage : manages
+Page1 --> DiaryController : uses
+Page2 --> DiaryController : uses
+DiaryController --> DiaryModel : uses
+DiaryModel -|> BaseModel : inherits
+BasePage -|> Page1 : inherits
+BasePage -|> Page2 : inherits
+
+@enduml

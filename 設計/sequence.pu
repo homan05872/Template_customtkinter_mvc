@@ -1,0 +1,15 @@
+@startuml
+
+actor User
+
+User -> MainView : show_page("Page1")
+MainView -> Page1 : tkraise()
+Page1 -> DiaryController : msg_output(1)
+DiaryController -> DiaryModel : get_all()
+DiaryModel -> DiaryModel : connect()
+DiaryModel -> DiaryModel : execute query
+DiaryModel --> DiaryController : return data
+DiaryController --> Page1 : return data_str
+Page1 -> User : show info dialog with data
+
+@enduml
