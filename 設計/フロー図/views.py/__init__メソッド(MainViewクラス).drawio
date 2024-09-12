@@ -1,0 +1,276 @@
+<mxfile host="Electron" modified="2024-09-06T21:10:50.292Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="aS8wKDKhq5H11Cq4LZTT" version="24.2.5" type="device" pages="2">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="__init__(MainViewクラス)">
+    <mxGraphModel dx="1036" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2BLb2fvxrPAkToGqMFL2-0" target="G7ehIpi2Qg5XLF-rP-gx-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2BLb2fvxrPAkToGqMFL2-0" value="開始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="350" y="300" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2BLb2fvxrPAkToGqMFL2-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.02;entryY=0.26;entryDx=0;entryDy=0;endArrow=none;endFill=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2BLb2fvxrPAkToGqMFL2-2" target="2BLb2fvxrPAkToGqMFL2-0" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2BLb2fvxrPAkToGqMFL2-2" value="&lt;div&gt;初期化メソッド&lt;/div&gt;&lt;div&gt;※インスタンス生成時に実行されます。&lt;/div&gt;&lt;div&gt;引数１：self &amp;gt;インスタンス自身&lt;/div&gt;&lt;div&gt;引数２：contorllers &amp;gt;コントローラクラスの辞書型リスト&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#ff3333&quot;&gt;引数３：style_managers &amp;gt; スタイル管理クラスの辞書型リスト&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="490" y="230" width="350" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2BLb2fvxrPAkToGqMFL2-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2BLb2fvxrPAkToGqMFL2-6" value="&lt;div&gt;インポートモジュール（実装で使用したもの）&lt;/div&gt;&lt;div&gt;&lt;div&gt;import customtkinter as ctk　＞ UI作成モジュール&lt;/div&gt;&lt;div&gt;from style_manager import StyleManager ＞ スタイル定義クラス(static)&lt;/div&gt;&lt;div&gt;from pages import BasePage ＞ Pageの抽象クラス&lt;/div&gt;&lt;div&gt;from typing import Any ＞ 型ヒントで使用&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="450" y="30" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2BLb2fvxrPAkToGqMFL2-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2BLb2fvxrPAkToGqMFL2-21" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;初期化メソッド&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;クラス：MainWindowクラス&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;継承：ctk.CTk &amp;gt; ウィンドウクラス&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;クラスの役割&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;・Window表示&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;・Pageクラスの管理&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="20" y="30" width="290" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-16" value="終了" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="350" y="1263" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="G7ehIpi2Qg5XLF-rP-gx-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="703" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-18" value="空の辞書型配列を定義&lt;div&gt;(Pageクラス格納用)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="285" y="563" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-19" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=-0.006;exitY=0.387;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="G7ehIpi2Qg5XLF-rP-gx-20" target="G7ehIpi2Qg5XLF-rP-gx-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="515" y="453" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-20" value="&lt;div&gt;カラーテーマ指定&lt;/div&gt;&lt;div&gt;ダークモード：黒基調のウィジェット&lt;/div&gt;&lt;div&gt;ブルー：デフォルトカラー（ボタンなどの色）&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="545" y="723" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="763" as="sourcePoint" />
+            <mxPoint x="385" y="843" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-22" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="G7ehIpi2Qg5XLF-rP-gx-23" target="G7ehIpi2Qg5XLF-rP-gx-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="515" y="593" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-23" value="グリッドレイアウト設定&lt;div&gt;0行目に設置された要素を縦いっぱいに広げる&lt;/div&gt;&lt;div&gt;0&lt;span style=&quot;background-color: initial;&quot;&gt;列目に設置された要素を横いっぱいに広げる&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="545" y="863" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="G7ehIpi2Qg5XLF-rP-gx-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="903" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="G7ehIpi2Qg5XLF-rP-gx-26" target="G7ehIpi2Qg5XLF-rP-gx-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-26" value="ウィンドウのキャプション設定" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="285" y="983" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-27" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="G7ehIpi2Qg5XLF-rP-gx-28" target="G7ehIpi2Qg5XLF-rP-gx-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-28" value="self.title属性に&quot;MVC with Page Navigation&quot;を代入" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="545" y="1003" width="305" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-29" value="グリッドレイアウト設定" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="290" y="843" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-30" value="カラーテーマ設定" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="285" y="703" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="G7ehIpi2Qg5XLF-rP-gx-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="1263" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-32" value="画面サイズ設定（1000x550）" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="285" y="1123" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="G7ehIpi2Qg5XLF-rP-gx-33" target="G7ehIpi2Qg5XLF-rP-gx-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-33" value="引数２と引数３をインスタンス変数へ格納する" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="285" y="420" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-37" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="G7ehIpi2Qg5XLF-rP-gx-36" target="G7ehIpi2Qg5XLF-rP-gx-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G7ehIpi2Qg5XLF-rP-gx-36" value="&lt;div&gt;各ページクラスでコントローラクラスやスタイルクラスを取り出して使用するため&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="522.5" y="430" width="350" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Ver1.0.0__init__(MainViewクラス)のコピー" id="0rBND-eUWmTRl9AOBk8t">
+    <mxGraphModel dx="1036" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="GJvaPOyET6ufOetawxjG-0" />
+        <mxCell id="GJvaPOyET6ufOetawxjG-1" parent="GJvaPOyET6ufOetawxjG-0" />
+        <mxCell id="GJvaPOyET6ufOetawxjG-2" value="開始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="350" y="300" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.02;entryY=0.26;entryDx=0;entryDy=0;endArrow=none;endFill=0;entryPerimeter=0;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-4" target="GJvaPOyET6ufOetawxjG-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-4" value="&lt;div&gt;初期化メソッド&lt;/div&gt;&lt;div&gt;※インスタンス生成時に実行されます。&lt;/div&gt;&lt;div&gt;引数１：self &amp;gt;インスタンス自身&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#0066cc&quot;&gt;引数2：pages &amp;gt;Pageクラスの配列　←削除&lt;/font&gt;&lt;/div&gt;&lt;div&gt;引数3：contorllers &amp;gt;コントローラクラスの辞書型リスト&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="490" y="230" width="305" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GJvaPOyET6ufOetawxjG-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-6" value="&lt;div&gt;インポートモジュール（実装で使用したもの）&lt;/div&gt;&lt;div&gt;&lt;div&gt;import customtkinter as ctk　＞ UI作成モジュール&lt;/div&gt;&lt;div&gt;from style_manager import StyleManager ＞ スタイル定義クラス(static)&lt;/div&gt;&lt;div&gt;from pages import BasePage ＞ Pageの抽象クラス&lt;/div&gt;&lt;div&gt;from typing import Any ＞ 型ヒントで使用&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="450" y="30" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GJvaPOyET6ufOetawxjG-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=-0.006;exitY=0.387;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-9" target="GJvaPOyET6ufOetawxjG-21" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="515" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-9" value="&lt;div&gt;カラーテーマ指定&lt;/div&gt;&lt;div&gt;ダークモード：黒基調のウィジェット&lt;/div&gt;&lt;div&gt;ブルー：デフォルトカラー（ボタンなどの色）&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="545" y="440" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GJvaPOyET6ufOetawxjG-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="340" as="sourcePoint" />
+            <mxPoint x="385" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GJvaPOyET6ufOetawxjG-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="480" as="sourcePoint" />
+            <mxPoint x="385" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-12" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-13" target="GJvaPOyET6ufOetawxjG-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="515" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-13" value="グリッドレイアウト設定&lt;div&gt;0行目に設置された要素を縦いっぱいに広げる&lt;/div&gt;&lt;div&gt;0&lt;span style=&quot;background-color: initial;&quot;&gt;列目に設置された要素を横いっぱいに広げる&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="545" y="580" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GJvaPOyET6ufOetawxjG-1" target="GJvaPOyET6ufOetawxjG-17" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="620" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-15" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;初期化メソッド&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;クラス：MainViewクラス&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;継承：ctk.CTk &amp;gt; ウィンドウクラス&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="20" y="30" width="290" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-17" target="GJvaPOyET6ufOetawxjG-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-17" value="ウィンドウのキャプション設定" style="rounded=1;whiteSpace=wrap;html=1;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="285" y="700" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-19" target="GJvaPOyET6ufOetawxjG-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-19" value="self.title属性に&quot;MVC with Page Navigation&quot;を代入" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="545" y="720" width="305" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-20" value="グリッドレイアウト設定" style="rounded=1;whiteSpace=wrap;html=1;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="290" y="560" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-21" value="カラーテーマ設定" style="rounded=1;whiteSpace=wrap;html=1;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="285" y="420" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-23" target="GJvaPOyET6ufOetawxjG-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-23" value="画面サイズ設定（1000x550）" style="rounded=1;whiteSpace=wrap;html=1;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="285" y="840" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-25" target="GJvaPOyET6ufOetawxjG-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-25" value="空の辞書型配列を定義&lt;div&gt;(Pageクラス格納用)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="285" y="980" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-27" value="ループ開始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="305" y="1120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-28" value="引数2：pages配列分ループ" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#0066CC;strokeColor=#666666;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="522" y="1120" width="158" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-29" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-28" target="GJvaPOyET6ufOetawxjG-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-31" target="GJvaPOyET6ufOetawxjG-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-31" value="引数2：pagesから取り出した&lt;div&gt;クラス名（文字列）を取得&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="285" y="1260" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-33" target="GJvaPOyET6ufOetawxjG-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-33" value="引数2：pagesから取り出した&lt;div&gt;クラスのインスタンス生成&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="285" y="1400" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-34" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-35" target="GJvaPOyET6ufOetawxjG-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-35" value="引数１：master=self　＞MainViewクラス&lt;div&gt;引数２：controllers=controllers ＞引数３(&lt;span style=&quot;background-color: initial;&quot;&gt;コントローラクラスの辞書型リスト)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;引数３：辞書形式のStyleMangerクラスの&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;transparent_frameを渡す。&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#0066CC;strokeColor=#666666;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="545" y="1390" width="445" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-37" target="GJvaPOyET6ufOetawxjG-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-37" value="空の辞書型配列のクラス名をキーにに生成したインスタンスを代入" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="285" y="1540" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-39" target="GJvaPOyET6ufOetawxjG-43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-39" value="生成したクラスをself.gridメソッド&lt;div&gt;で配置&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="285" y="1680" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-40" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-41" target="GJvaPOyET6ufOetawxjG-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-41" value="引数１：row=0 ＞0行目へ配置&lt;div&gt;引数２：column=0 ＞&lt;span style=&quot;background-color: initial;&quot;&gt;0列目へ配置&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;引数３：&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;sticky=&quot;nsew&quot; ＞ 配置したクラスを全方向へ広げる&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#0066CC;strokeColor=#666666;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="545" y="1650" width="445" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GJvaPOyET6ufOetawxjG-1" source="GJvaPOyET6ufOetawxjG-43" target="GJvaPOyET6ufOetawxjG-44" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-43" value="ループ終了" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;direction=west;fontColor=#0066CC;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="305" y="1820" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJvaPOyET6ufOetawxjG-44" value="終了" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="GJvaPOyET6ufOetawxjG-1" vertex="1">
+          <mxGeometry x="350" y="1960" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Hq5eqEDDtSDcSJgGznY8-0" value="&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#0066cc&quot; style=&quot;font-size: 14px;&quot;&gt;※青：削除&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=none;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="GJvaPOyET6ufOetawxjG-1">
+          <mxGeometry x="175" y="200" width="110" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

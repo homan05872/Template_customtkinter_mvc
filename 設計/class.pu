@@ -1,35 +1,23 @@
-
 @startuml name
 
-' Define classes
-class MainView {
-    - pages: dict[str, BasePage]
+' クラス定義
+class MainWindow {
+    - controllers: dict[str, コントローラクラス]
     + __init__(pages, controllers: dict[str, Any])
     + show_page(page_name: str)
 }
 
 class DiaryController {
-    - view: BasePage
-    - diary_model: BaseModel
-    + __init__(diary_model: BaseModel)
+    - diary_model: DiaryModel
+    + __init__(diary_model: DiaryModel)
     + get_list_data(): str
     + get_one(id: int): str
 }
 
-abstract BaseModel {
-    - conn: Optional[sqlite3.Connection]
-    - cursor: Optional[sqlite3.Cursor]
-    + connect()
-    + close()
-}
-
 class DiaryModel {
+    - t_diary: テーブル名
     + get_all(): list[sqlite3.Row]
-}
-
-abstract BasePage {
-    + build_ui(): void <<abstract>>
-    + show_page(page_name: str): void
+    + get_one(id:int): list[sqlite3.Row]
 }
 
 class Page1 {
@@ -46,13 +34,12 @@ class Page2 {
     + msg_output(page_num: int): void
 }
 
-' Define relationships
-MainView --> "0..*" BasePage : manages
-Page1 --> DiaryController : uses
-Page2 --> DiaryController : uses
-DiaryController --> DiaryModel : uses
-DiaryModel -|> BaseModel : inherits
-BasePage -|> Page1 : inherits
-BasePage -|> Page2 : inherits
+' クラスの関連性を表す
+MainWindow o-- Page1 : 管理
+MainWindow o-- Page2 : 管理
+MainWindow --> DiaryController : 使用
+DiaryController --> DiaryModel : 使用
+Page1 --> DiaryController : 使用
+Page2 --> DiaryController : 使用
 
 @enduml

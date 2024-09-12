@@ -19,7 +19,7 @@ customtkinterのmvcパターン開発のテンプレートです。
 
 | クラス名 | 種類 | 説明 | 備考 |
 | -- | -- | -- | -- |
-| MainViewクラス | ビュー | Pageクラスを管理 | ページの表示・遷移など |
+| MainWindowクラス | ビュー | メインウィンドウ表示 & Pageクラスを管理 | ページの表示・遷移など |
 | Pageクラス | ビュー | 画面UIの生成 & UI更新担当 | 抽象クラス有 |
 | Contorllerクラス | コントローラ | ビジネスロジックを担当 |  |
 | Modelクラス | モデル | DB連携を担当 | 抽象クラス有 |
@@ -35,29 +35,37 @@ customtkinterのmvcパターン開発のテンプレートです。
 ※下記はmain.pyです。
 1. モデルとコントローラはアプリDBの使用するテーブルごとに作成する。
 
-1. 作成したコントローラはmain()関数でインスタンス化する
+1. 作成したコントローラはmain()関数でインスタンス化し、MainWindowクラスで使用するクラスをインスタンス生成時に渡す
     ```python
     def main():
     # モデルを生成
     diary_model = DiaryModel()
     
-    # コントローラーを生成
-    diary_controller = DiaryController(diary_model)
-    ```
-1. コントローラのインスタンスを生成したら、下記に作ったPageクラスと一緒に渡す
-    ```python
-    # ビューにページとコントローラーを設定　※MainViewに関連するすべてのコントローラを渡す
-    main_view = MainView(pages=[Page1, Page2], controllers={
-        "diary": diary_controller,
-    })
+    # コントローラクラス群の辞書型定義
+    main_controllers={
+        "diary": DiaryController(diary_model),
+    }
+    # スタイルクラス群の辞書型定義
+    main_styles={
+        "main": MainStyle(),
+    }
     
-    # 生成したコントローラにView設定　※MainViewに関連するすべてのコントローラ
-    diary_controller.view = main_view
+    # ビュークラスにページクラス群とコントローラークラス群を渡す
+    main_window = MainWindow(main_controllers, main_styles)
+    ```
+1. MainWindowクラスで使用するページは下記のループでインスタンス生成
+    ```python
+    # ページクラス配置
+    for PageClass in [Page1, Page2]:
+        page_name = PageClass.__name__
+        page = PageClass(master=main_window, **main_styles['main'].transparent_frame)
+        main_window.pages[page_name] = page
+        page.grid(row=0, column=0, sticky="nsew")
     ```
 1. 最初に表示したいページを下記のように設定する。
     ```python
     # アプリケーション開始
-    main_view.show_page("Page1") # 最初に表示したいページを表示
+    main_view.show_page("Page1") # 最初に表示したいページクラス名を渡す。
     main_view.mainloop()
     ```
 ## Pageクラスの作り方

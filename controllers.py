@@ -3,7 +3,6 @@ from typing import Any
 
 class DiaryController:
     def __init__(self, diary_model:BaseModel) -> None:
-        super().__init__()
         # モデル変数用意
         self.diary_model = diary_model
 
@@ -20,7 +19,7 @@ class DiaryController:
         data_str:str = "\n".join(data_str_list)
         
         return data_str
-    
+
     def get_one(self, id:int) -> str:
         '''idでレコ―ドデータを取得'''
         # 初期化

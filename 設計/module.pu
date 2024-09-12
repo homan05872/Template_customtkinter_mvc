@@ -14,8 +14,8 @@ package "models.py" {
     [DiaryModel]
 }
 
-package "views.py" {
-    [MainView]
+package "windows.py" {
+    [MainWindow]
 }
 
 package "pages.py" {
@@ -29,12 +29,12 @@ database "sample.db" as DB
 ' 依存関係を定義
 "main.py" --> "controllers.py"
 "main.py" --> "models.py"
-"main.py" --> "views.py"
+"main.py" --> "windows.py"
 "main.py" --> "pages.py"
 
 "controllers.py" --> "models.py"
-"views.py" --> "controllers.py"
-"views.py" --> "pages.py"
+"windows.py" --> "controllers.py"
+"windows.py" --> "pages.py"
 
 "pages.py" --> "controllers.py"
 "models.py" --> DB

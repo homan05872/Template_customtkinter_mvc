@@ -1,7 +1,7 @@
 @startuml name
 
 package "Presentation Layer" {
-    class MainView {
+    class MainWindow {
         + Page1
         + Page2
     }
@@ -25,10 +25,10 @@ package "Data Access Layer" {
     }
 }
 
-MainView --> DiaryController : "Calls"
+MainWindow --> DiaryController : "Calls"
 DiaryController --> DiaryModel : "Calls"
 
-MainView -> Page1 : "Navigates"
-MainView -> Page2 : "Navigates"
+MainWindow -> Page1 : "Navigates"
+MainWindow -> Page2 : "Navigates"
 
 @enduml
