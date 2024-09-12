@@ -1,0 +1,41 @@
+@startuml name
+skinparam packageStyle rectangle
+
+' モジュールをパッケージとして定義
+package "main.py" {
+}
+
+package "controllers.py" {
+    [DiaryController]
+}
+
+package "models.py" {
+    [BaseModel]
+    [DiaryModel]
+}
+
+package "windows.py" {
+    [MainWindow]
+}
+
+package "pages.py" {
+    [BasePage]
+    [Page1]
+    [Page2]
+}
+
+database "sample.db" as DB
+
+' 依存関係を定義
+"main.py" --> "controllers.py"
+"main.py" --> "models.py"
+"main.py" --> "windows.py"
+"main.py" --> "pages.py"
+
+"controllers.py" --> "models.py"
+"windows.py" --> "controllers.py"
+"windows.py" --> "pages.py"
+
+"pages.py" --> "controllers.py"
+"models.py" --> DB
+@enduml

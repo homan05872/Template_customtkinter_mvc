@@ -1,0 +1,221 @@
+<mxfile host="Electron" modified="2024-09-11T08:16:03.389Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="QY_Rtp1opZw1ImlXWJhB" version="24.2.5" type="device" pages="2">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="main">
+    <mxGraphModel dx="1036" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="81keJ2TzeIuj5GgUxpqN-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="81keJ2TzeIuj5GgUxpqN-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="インスタンス生成&lt;div&gt;モデルクラス群&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="295" y="290" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="81keJ2TzeIuj5GgUxpqN-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="81keJ2TzeIuj5GgUxpqN-0" target="WIyWlLk6GJQsqaUBKTNV-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81keJ2TzeIuj5GgUxpqN-0" value="開始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="340" y="200" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="81keJ2TzeIuj5GgUxpqN-2" target="k5mgrbOjrDHril6_vjiL-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81keJ2TzeIuj5GgUxpqN-2" value="インスタンス生成&lt;div&gt;コントローラクラス群&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="295" y="410" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="81keJ2TzeIuj5GgUxpqN-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="81keJ2TzeIuj5GgUxpqN-4" target="81keJ2TzeIuj5GgUxpqN-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81keJ2TzeIuj5GgUxpqN-4" value="引数について&lt;div&gt;連携に必要なモデルクラスを渡す&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="485" y="370" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="81keJ2TzeIuj5GgUxpqN-30" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;エントリポイント（実行ファイル）&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;関数の役割&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;・アプリ起動&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;・各クラスの連携&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="10" y="10" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EANnelC62ZsFQOmLX0v8-1" value="&lt;div&gt;インポートモジュール（実装で使用したもの）&lt;/div&gt;&lt;div&gt;&lt;div&gt;from controllers import DiaryController ＞コントローラクラス&lt;/div&gt;&lt;div&gt;from views import MainView ＞ ビュークラス&lt;/div&gt;&lt;div&gt;from models import DiaryModel&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;＞ モルクラス&lt;/span&gt;&lt;/div&gt;&lt;div&gt;from pages import Page1, Page2&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;＞ ページクラス&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="440" y="60" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-0" value="インスタンス生成&lt;div&gt;MainWindowクラス&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="295" y="660" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-2" target="k5mgrbOjrDHril6_vjiL-0" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="455" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-2" value="&lt;div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;引数1: 辞書型 [contorllerクラスのインスタンス]&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 51, 51);&quot;&gt;引数２：辞書型リスト[キー&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 51, 51); background-color: initial;&quot;&gt;(str)&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 51, 51); background-color: initial;&quot;&gt;：StyleMangerインスタンス]&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="495" y="650" width="345" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="927" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-4" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;MainWindowクラスに配置する、&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Pageクラスの配列分ループする&lt;br&gt;ループ開始&lt;/span&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="276.5" y="790" width="197" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-8" target="k5mgrbOjrDHril6_vjiL-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-8" value="取り出したPageクラスインスタンスから取り出した&lt;span style=&quot;background-color: initial;&quot;&gt;クラス名（文字列）を取得&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="275" y="927" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-10" target="k5mgrbOjrDHril6_vjiL-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-10" value="引数2：pagesから取り出した&lt;div&gt;クラスのインスタンス生成&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="275" y="1067" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-12" target="k5mgrbOjrDHril6_vjiL-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-12" value="引数１：master=MainViewクラスのインスタンス&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#FF3333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="535" y="1057" width="285" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-14" target="k5mgrbOjrDHril6_vjiL-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-14" value="Viewクラスの辞書型インスタンス変数にクラス名を&lt;span style=&quot;background-color: initial;&quot;&gt;キーにに生成したPageクラス&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;インスタンスを代入&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="275" y="1207" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-16" target="k5mgrbOjrDHril6_vjiL-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-16" value="生成したクラスをself.gridメソッド&lt;div&gt;で配置&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="275" y="1347" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-18" target="k5mgrbOjrDHril6_vjiL-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-18" value="引数１：row=0 ＞0行目へ配置&lt;div&gt;引数２：column=0 ＞&lt;span style=&quot;background-color: initial;&quot;&gt;0列目へ配置&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;引数３：&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;sticky=&quot;nsew&quot; ＞ 配置したクラスを全方向へ広げる&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#FF3333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="535" y="1317" width="335" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-19" value="ループ終了" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;direction=west;fontColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="295" y="1487" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="376" y="1627" as="targetPoint" />
+            <mxPoint x="376" y="1547" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-22" target="k5mgrbOjrDHril6_vjiL-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-22" value="MainViewインスタンス&lt;div&gt;.show_pageメソッド&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="281" y="1627" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-24" target="k5mgrbOjrDHril6_vjiL-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-24" value="MainViewインスタンス&lt;div&gt;.mainloopメソッド&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="281" y="1767" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-25" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-26" target="k5mgrbOjrDHril6_vjiL-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-26" value="&lt;div&gt;※ページクラス&lt;/div&gt;引数1: &quot;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Page1&quot; -&amp;gt;&amp;nbsp;&lt;/span&gt;str型" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="536" y="1607" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-27" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-28" target="k5mgrbOjrDHril6_vjiL-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-28" value="MainWindowクラス" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="536" y="1757" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-29" value="終了" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="341" y="1907" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-0" target="k5mgrbOjrDHril6_vjiL-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="k5mgrbOjrDHril6_vjiL-31" target="k5mgrbOjrDHril6_vjiL-0" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5mgrbOjrDHril6_vjiL-31" value="インスタンス生成&lt;div&gt;StyleMangerクラス&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="295" y="530" width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="BK_main" id="3xy7h_C-IZ3wRJFn6r6Z">
+    <mxGraphModel dx="1050" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-0" />
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-1" parent="2CEzJe9J1U1fmUlXWlMI-0" />
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-3" target="2CEzJe9J1U1fmUlXWlMI-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-3" value="インスタンス生成&lt;div&gt;DiaryModelクラス&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="295" y="290" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-5" target="2CEzJe9J1U1fmUlXWlMI-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-5" value="開始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="340" y="200" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-7" target="2CEzJe9J1U1fmUlXWlMI-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-7" value="インスタンス生成&lt;div&gt;DiaryControllerクラス&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="295" y="410" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-9" target="2CEzJe9J1U1fmUlXWlMI-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-9" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;引数1:&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(0, 0, 0);&quot;&gt;DiaryModelインスタンス&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="485" y="370" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-11" value="インスタンス生成&lt;div&gt;MainViewクラス&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="295" y="530" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-12" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-13" target="2CEzJe9J1U1fmUlXWlMI-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="455" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-13" value="引数1: 配列 [&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Pageクラス]&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;引数2: 辞書型 [contorllerクラスのインスタンス]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="495" y="520" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-15" target="2CEzJe9J1U1fmUlXWlMI-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-15" value="MainViewインスタンス&lt;div&gt;.show_pageメソッド&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="280" y="650" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-17" target="2CEzJe9J1U1fmUlXWlMI-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-17" value="MainViewインスタンス&lt;div&gt;.mainloopメソッド&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="280" y="790" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-19" target="2CEzJe9J1U1fmUlXWlMI-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-19" value="&lt;div&gt;※ページクラス&lt;/div&gt;引数1: &quot;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Page1&quot; -&amp;gt;&amp;nbsp;&lt;/span&gt;str型" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="535" y="630" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="2CEzJe9J1U1fmUlXWlMI-1" source="2CEzJe9J1U1fmUlXWlMI-21" target="2CEzJe9J1U1fmUlXWlMI-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-21" value="MainViewクラスが継承している&lt;div&gt;&lt;/div&gt;&lt;div&gt;customtkinter.CTkのメソッド&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="535" y="780" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-22" value="終了" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="340" y="930" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-23" value="エントリポイント（実行ファイル）" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="10" y="10" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2CEzJe9J1U1fmUlXWlMI-24" value="&lt;div&gt;インポートモジュール（実装で使用したもの）&lt;/div&gt;&lt;div&gt;&lt;div&gt;from controllers import DiaryController ＞コントローラクラス&lt;/div&gt;&lt;div&gt;from views import MainView ＞ ビュークラス&lt;/div&gt;&lt;div&gt;from models import DiaryModel&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;＞ モルクラス&lt;/span&gt;&lt;/div&gt;&lt;div&gt;from pages import Page1, Page2&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;＞ ページクラス&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="2CEzJe9J1U1fmUlXWlMI-1" vertex="1">
+          <mxGeometry x="440" y="60" width="350" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

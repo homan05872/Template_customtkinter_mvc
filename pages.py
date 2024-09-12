@@ -9,7 +9,7 @@ class BasePage(ctk.CTkFrame, ABC):
         super().__init__(master, **kwargs)
     
     @abstractmethod
-    def build_ui(self):
+    def build_ui(self) -> None:
         """UIを構築するための抽象メソッド"""
         ...
     
@@ -18,14 +18,14 @@ class BasePage(ctk.CTkFrame, ABC):
         self.master.show_page(page_name)
         
 class Page1(BasePage):
-    def __init__(self, master:ctk.CTk, controllers: dict[str, Any], **kwargs) -> None:
+    def __init__(self, master:ctk.CTk, **kwargs) -> None:
         super().__init__(master, **kwargs)
         # コントローラ設定
-        self.diary_controller = controllers['diary']
+        self.diary_controller = self.master.controllers['diary']
         # UI生成
         self.build_ui()
         
-    def build_ui(self):
+    def build_ui(self) -> None:
         '''UI生成するメソッド'''
         # Gridレイアウト設定
         self.grid_rowconfigure(0, weight=1)
@@ -48,16 +48,16 @@ class Page1(BasePage):
                             + f"{data}")
 
 class Page2(BasePage):
-    def __init__(self, master:ctk.CTk, controllers: dict[str, Any], **kwargs) -> None:
+    def __init__(self, master:ctk.CTk, **kwargs) -> None:
         super().__init__(master, **kwargs)
         # コントローラ設定
-        self.diary_controller = controllers['diary']
+        self.diary_controller = master.controllers['diary']
         # 入力検証用のコマンドを登録　※バリデーションはself.registerを使用して関数登録して使用する必要がある
         self.validate_cmd = self.register(self.validate_numeric_input)
         # UI生成
         self.build_ui()
         
-    def build_ui(self):
+    def build_ui(self) -> None:
         '''UI生成するメソッド'''
         # Gridレイアウト設定
         self.grid_rowconfigure(0, weight=1)
@@ -85,7 +85,7 @@ class Page2(BasePage):
         if not id:
             self.error_label = ctk.CTkLabel(self, text="※idを入力してください。", text_color="red")
             self.error_label.grid(row=3, column=0, columnspan=2)
-        elif id:
+        else:
             data:str = self.diary_controller.get_one(id)
             if not data:
                 data = '指定idのデータはありません。'
