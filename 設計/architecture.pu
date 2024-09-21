@@ -2,12 +2,18 @@
 
 package "Presentation Layer" {
     class MainWindow {
-        + Page1
-        + Page2
+        + controllers
+        + show_page()
     }
 
-    class Page1
-    class Page2
+    class Page1 {
+        + diary_controller
+        + build_ui()
+    }
+    class Page2 {
+        + diary_controller
+        + build_ui()
+    }
 }
 
 package "Business Logic Layer" {
