@@ -27,7 +27,7 @@ customtkinterのmvcパターン開発のテンプレートです。
 | CommonStyeleクラス | ビュー | ウィジェットのスタイル保持する(共通化したいものなど) ||
 | Appクラス | ビュー | 各クラスの連携やアプリ起動を担当 |下記のクラス図には載せていません。|
 
-![alt text](設計\images\クラス図.drawio.svg)
+![alt text](設計/images/クラス図.drawio.svg)
 
 ## モジュール構成
 基本的に作成した各クラスをmain.py(エントリポイント)で生成し、それぞれ書くクラス独立した状態を保ちつつ連携を行います。
@@ -38,11 +38,11 @@ customtkinterのmvcパターン開発のテンプレートです。
 - ページ１
 ボタンを押すとメッセージでDBから取得した一覧データが表示されます。
 
-![alt text](設計\images\ページ１.png)
+![alt text](設計/images/ページ１.png)
 - ページ２
 ボタンを押すとメッセージボックスに入力したIDのレコードデータが表示されます。
 
-![alt text](設計\images\ページ２.png)
+![alt text](設計/images/ページ２.png)
 
 ## 事前準備
 下記のスクリプトを実行し、「sample.db」を作成し、ルートディレクトリに配置してください。
@@ -93,7 +93,7 @@ finally:
 
 作成されるDiaryテーブルとサンプルデータ
 
-![alt text](設計\images\Diaryテーブル.png)
+![alt text](設計/images/Diaryテーブル.png)
 
 
 ## 使い方
@@ -197,8 +197,8 @@ class Page1(BasePage):
     def msg_output(self, page_num:int) -> None:
         '''メッセージを出力するメソッド'''
         data:str = self.diary_controller.get_list_data()
-        messagebox.showinfo("Information", f"ページ{page_num}のメッセージです。\n\n"
-                            + "Diaryデータ：\n"
+        messagebox.showinfo("Information", f"ページ{page_num}のメッセージです。/n/n"
+                            + "Diaryデータ：/n"
                             + f"{data}")
 ```
 
@@ -262,7 +262,7 @@ class DiaryController:
             for data in data_list
         ]
         # リストを改行で結合して、一つの文字列にする
-        data_str:str = "\n".join(data_str_list)
+        data_str:str = "/n".join(data_str_list)
         
         return data_str
 ```
