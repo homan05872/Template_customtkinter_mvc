@@ -13,8 +13,6 @@ CREATE TABLE IF NOT EXISTS Diary (
 
 -- data
 INSERT INTO Diary (title, content, create_at)
-VALUES ('日記1', '内容１', '2024-8-31 16:34');
-INSERT INTO Diary (title, content, create_at)
-VALUES ('日記2', '内容２', '2024-8-31 16:34');
-INSERT INTO Diary (title, content, create_at)
-VALUES ('日記3', '内容３', '2024-8-31 16:34');
+VALUES ('日記1', '内容１', '2024-8-31 16:34'),
+        ('日記2', '内容２', '2024-8-31 16:34'),
+        ('日記3', '内容３', '2024-8-31 16:34');

@@ -3,34 +3,37 @@ skinparam packageStyle rectangle
 
 ' モジュールをパッケージとして定義
 package "main.py" {
+    [main関数]
+    [Appクラス]
 }
 
 package "controllers.py" {
-    [DiaryController]
+    [DiaryControllerクラス]
 }
 
 package "models.py" {
-    [BaseModel]
-    [DiaryModel]
+    [BaseModelクラス]
+    [DiaryModelクラス]
 }
 
 package "windows.py" {
-    [MainWindow]
+    [MainWindowクラス]
 }
 
 package "pages.py" {
-    [BasePage]
-    [Page1]
-    [Page2]
+    [BasePageクラス]
+    [Page1クラス]
+    [Page2クラス]
 }
 
 database "sample.db" as DB
 
 ' 依存関係を定義
-"main.py" --> "controllers.py"
-"main.py" --> "models.py"
-"main.py" --> "windows.py"
-"main.py" --> "pages.py"
+[main関数] --> [Appクラス]
+[Appクラス] --> "controllers.py"
+[Appクラス] --> "models.py"
+[Appクラス] --> "windows.py"
+[Appクラス] --> "pages.py"
 
 "controllers.py" --> "models.py"
 "windows.py" --> "controllers.py"
