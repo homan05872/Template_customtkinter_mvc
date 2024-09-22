@@ -25,6 +25,7 @@ class CommonStyle:
         }
         
     def change_transparent_frame(self, theme:str):
+        ''' windowsクラスの背景色テーマに合わせてデザイン変更'''
         if theme == 'dark':
             self.transparent_frame["fg_color"] = BASE_COLOR_DARK
         elif theme == 'light':

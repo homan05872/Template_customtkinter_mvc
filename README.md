@@ -22,7 +22,7 @@ customtkinterのmvcパターン開発のテンプレートです。
 | -- | -- | -- | -- |
 | MainWindowクラス | ビュー | メインウィンドウ表示 & Pageクラスを管理 | ページの表示・遷移など |
 | Pageクラス | ビュー | 画面UIの生成 & UI更新担当 | 抽象クラス有 |
-| Contorllerクラス | コントローラ | ビジネスロジックを担当 |  |
+| Contorllerクラス | コントローラ | ビジネスロジックを担当 | |
 | Modelクラス | モデル | DB連携を担当 | 抽象クラス有 |
 | CommonStyeleクラス | ビュー | ウィジェットのスタイル保持する(共通化したいものなど) ||
 | Appクラス | ビュー | 各クラスの連携やアプリ起動を担当 |下記のクラス図には載せていません。|
@@ -37,13 +37,16 @@ customtkinterのmvcパターン開発のテンプレートです。
 ## 画面
 - ページ１
 ボタンを押すとメッセージでDBから取得した一覧データが表示されます。
+
 ![alt text](設計\images\ページ１.png)
 - ページ２
 ボタンを押すとメッセージボックスに入力したIDのレコードデータが表示されます。
+
 ![alt text](設計\images\ページ２.png)
 
 ## 事前準備
 下記のスクリプトを実行し、「sample.db」を作成し、ルートディレクトリに配置してください。
+
 create_DB.py
 ```python
 import sqlite3
@@ -89,6 +92,7 @@ finally:
 ```
 
 作成されるDiaryテーブルとサンプルデータ
+
 ![alt text](設計\images\Diaryテーブル.png)
 
 
@@ -127,20 +131,25 @@ finally:
     ```
 1. BaseWindowクラス(抽象クラス)のpage_setメソッドに各ウィンドウで表示したいPageクラスの配列を渡して配置する。（Appクラスのコンストラクタで呼び出しています。）
     ```python
-    def page_set(self, pages:Any):
-        ''' Pageクラスの配置を行うメソッド '''
-        # ページクラス配置
-        for PageClass in pages:
-            page_name = PageClass.__name__
-            page = PageClass(master=self, **self.style.transparent_frame)
-            self.pages[page_name] = page
-            page.grid(row=0, column=0, sticky="nsew")
+    class BaseWindow(ctk.CTk, ABC):
+        # ・・省略・・
+        def page_set(self, pages:Any):
+            ''' Pageクラスの配置を行うメソッド '''
+            # ページクラス配置
+            for PageClass in pages:
+                page_name = PageClass.__name__
+                page = PageClass(master=self, **self.style.transparent_frame)
+                self.pages[page_name] = page
+                page.grid(row=0, column=0, sticky="nsew")
     ```
 1. 最初に表示したいページはAppクラスのrunメソッドで設定します。
     ```python
-    # アプリケーション開始
-    main_view.show_page("Page1") # 最初に表示したいページクラス名を渡す。
-    main_view.mainloop()
+    class App:
+        # ・・省略・・
+        def run(self) -> None:
+            ''' アプリ起動処理 '''
+            self.main_window.show_page("Page1") # 最初に表示したいページクラス名を渡す
+            self.main_window.mainloop()         # 起動
     ```
 ## Pageクラスの作り方
 下記のクラスを抽象クラスを継承して作る。
@@ -282,3 +291,68 @@ class DiaryModel(BaseModel):
                 self.close()
         return data
 ```
+
+<details>
+<summary>モジュール一覧</summary>
+
+| モジュール名      | 種類                       | 役割                                                                 | クラス命名ルール                                                               | 依存関係 ※インポートしているモジュール       |
+|------------------|----------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------|
+| main.py          | エントリポイント（実行ファイル） | ・エントリポイント（実行ファイル）<br>・各クラスの連携                            | 特になし。                                                                    | controllers.py, models.py, views.py      |
+| windows.py       | ビュークラス群               | Windowクラス群を定義                                                  | 名前の最後に「Window」を付ける                                                | controllers.py, models.py                |
+| pages.py         | 〃                          | ページごとのUI生成群を定義                                              | 名前の最後に「Page」を付ける                                                  | views.py, controller.py                  |
+| controllers.py   | コントローラクラス群         | ・モデルとビュークラスの連携<br>・ビジネスロジックを記述                         | ・名前の最後に「Contorller」を付ける<br>・モデルと関連がある場合は、モデルが連携している「テーブル名」＋「Contorller」とする。 | models.py, views.py                      |
+| models.py        | モデルクラス群               | DB操作を行うためのクラスを定義                                           | 操作を担当する「テーブル名」+「Model」クラス                                  | database                                 |
+| styles.py        | UIデザインをまとめて定義するクラス | UIデザインを管理するクラス                                                | 名前の最後に「Styleを付ける」                                                 | page.py                                  |
+
+</details>
+
+<details>
+<summary>クラス一覧</summary>
+
+| No. | クラス名           | 種類                        | 役割                                                           | モジュール       | 依存関係                                              | 継承関係                | 抽象クラス |
+|-----|--------------------|-----------------------------|----------------------------------------------------------------|-----------------|------------------------------------------------------|-------------------------|------------|
+| 1   | App                | 各クラスの連携やアプリ起動      | 各クラスの連携やアプリ起動                                            | main.py         | ・ビュークラス群<br>・コントローラクラス群<br>・モデルクラス群<br>・スタイルクラス群 | なし                     |            |
+| 2   | BaseWindow         | ビュークラス                  | ・ウィンドウの表示<br>・メインウィンドウで表示するPageクラスの管理。           | windows.py      | MainWindowで使用するコントローラ群                      | ・customtkinter.ctkクラス<br>・ABC | ○          |
+| 3   | MainWindow         | ビュークラス                  | ・ウィンドウの表示<br>・メインウィンドウで表示するPageクラスの管理。           | windows.py      | MainWindowで使用するコントローラ群                      | BaseWindowクラス         |            |
+| 4   | BasePage           | ビュークラス                  | 抽象ページクラス                                                 | pages.py        | Windowクラス群とコントローラクラス群                      | ・customtkinter.CTkFrameクラス<br>・ABC | ○          |
+| 5   | Page1              | ビュークラス                  | ・メインウィンドウで表示<br>・UI定義クラス（最初に表示されるページ）           | pages.py        | DiaryController                                     | BasePageクラス           |            |
+| 6   | Page2              | ビュークラス                  | ・メインウィンドウで表示<br>・UI定義クラス                                | pages.py        | DiaryController                                     | BasePageクラス           |            |
+| 7   | DiaryController     | コントローラクラス              | DiaryModel関連のビジネスロジック                                        | controllers.py  | DiaryModel                                          | なし                      |            |
+| 8   | BaseModel          | モデルクラス                  | DB連携を行う抽象モデルクラス                                           | models.py       | コントローラクラス群                                      | なし                      | ○          |
+| 9   | DiaryModel         | モデルクラス                  | 日記データ(Diaryテーブル)のアクセスを行うモデルクラス                      | models.py       | sample.db(データベース)                               | BaseModelクラス           |            |
+| 10  | CommonStyle        | スタイル定義クラス              | まとめて管理したいデザインを保持しておくためのクラス                       | styles.py       | ビュークラス群                                           | なし                      |            |
+
+</details>
+
+<details>
+<summary>メソッド一覧</summary>
+
+| No | メソッド名 | クラス | 説明 | 引数 | 戻り値 | 使用箇所 | ファイル名 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | main関数 | なし | エントリポイント(アプリ起動処理) | なし| None | main.py | main.py |
+| 2 | __init__ | App | 各クラスの連携 | 引数１：self | None | インスタンス生成時 | main.py |
+| 3 | run | App| アプリ起動 | 引数１：self | None | main関数 | main.py |
+| 4 | __init__ | BaseWindow | Windowクラスで共通する設定の初期化 | "引数１：self 引数２：page_name > pageクラス名(str型)" | None | App.run(), BasePage.show_page() | windows.py |
+| 5 | show_page| BaseWindow | Windowクラスで管理するページの遷移を行うメソッド | "引数１：self 引数２：page_name > pageクラス名(str型)" | None | App.run(), BasePage.show_page() | windows.py |
+| 6 | page_set | BaseWindow | Windowクラスで管理するページを配置するメソッド | "引数１：self 引数２：pages > pageクラスの配列" | None | App.__init__() | windows.py |
+| 7 | bg_set | BaseWindow | Windowクラスで管理する背景色を設定する | "引数１：self 引数２：theme > Windowの背景色テーマ名(Str型)" | None | BaseWindow.__init__() | windows.py |
+| 8 | __init__ | MainWindow | 初期化メソッド | "引数１：self 引数2：辞書型リスト[キー：コントローラクラス] 引数3：スタイルクラス 引数4：**kwargs > 辞書型引数" | None | インスタンス生成時 | windows.py |
+| 9 | __init__ | BasePage(抽象) | customtikinterのFrameクラスの継承設定 | "引数１：master：windowクラス 引数２：**kwargs" | None | インスタンス生成時 | pages.py |
+| 10 | build_ui | BasePage(抽象) | 抽象メソッド | なし | None | BasePage.show_page | pages.py |
+| 11 | __init__ | Page1 | 初期化メソッド | "引数１：master：windowクラス 引数２：**kwargs" | None | インスタンス生成時 | pages.py |
+| 12 | build_ui | Page1 | UIデザインを定義| なし | None | Page1.__init__ | pages.py |
+| 13 | msg_output | Page1 | ページ１で表示するメッセージ（Diaryの一覧データを表示） | 引数１：page_num（ページ数）:int型 | None | イベント（ページ１のメッセージ表示ボタン | pages.py |
+| 14 | __init__ | Page2 | 初期化メソッド | "引数１：master：windowクラス 引数２：**kwargs" | None | インスタンス生成時 | pages.py |
+| 15 | build_ui | Page2 | UIデザインを定義| なし | None | Page2.__init__ | pages.py |
+| 16 | msg_output | Page2 | ページ2で表示するメッセージ（Diaryの指定IDデータを表示） | 引数１：page_num（ページ数）:int型 | None| イベント（ページ２のメッセージ表示ボタン） | pages.py |
+| 17 | validate_numeric_input| Page2 | 入力を数値のみに制限する処理 | 引数１：char(入力された文字列): str型           | 文字列("true" or "false") | ページ２の入力フォームの値に変化があったとき | pages.py |
+| 18 | __init__ | DiaryController | 初期化メソッド | entry: Dict | None | インスタンス生成時 | controllers.py |
+| 19 | get_list_data | DiaryController | 取得したDairyテーブル一覧データで文字列成型 | なし | 一覧データ（str型） | Page1.msg_output| controllers.py |
+| 20 | get_one | DiaryController | Dairyテーブルの指定したIdのデータ取得し、文字列成型 | id；int型 | レコードデータ(str型) | Page2.msg_output| controllers.py |
+| 21 | __init__ | DiaryModel | 初期化メソッド | なし | None | インスタンス生成時 | models.py |
+| 22 | get_diary_list | DiaryModel | Dairyテーブルの一覧取得 | 〃 | 一覧データ（sqlite3オブジクト） | DiaryController.get_list_data | models.py |
+| 23 | get_one | DiaryModel | Dairyテーブルの指定したIdのデータ取得 | id；int型 | レコードデータ（sqlite3オブジクト） | DiaryController.get_one | models.py |
+| 24 | __init__ | CommonStyle | デザイン定義を保持 | なし | None | インスタンス生成時 | styles.py |
+| 25 | change_transparent_frame | CommonStyle | ウィンドウクラスの背景色テーマの変更に合わせて、保持するデザインを変更する | なし | None | インスタンス生成時 | styles.py |
+
+</details>
