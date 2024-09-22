@@ -1,2 +1,8 @@
+
 * text=auto
 *.drawio eol=lf
+
+# 改行コード変換で表示が崩れないようにする設定
+*.svg binary
+*.png binary
+*.jpg binary

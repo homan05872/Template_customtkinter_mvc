@@ -1,12 +1,12 @@
 import customtkinter as ctk
 import tkinter as tk
 from tkinter import messagebox
-from typing import Any
 from abc import ABC, abstractmethod
 
 class BasePage(ctk.CTkFrame, ABC):
     def __init__(self, master:ctk.CTk|tk.Tk, **kwargs) -> None:
         super().__init__(master, **kwargs)
+        self.style = self.master.style
     
     @abstractmethod
     def build_ui(self) -> None:
@@ -37,7 +37,7 @@ class Page1(BasePage):
         self.page_btn = ctk.CTkButton(self, text="ページ２へ", command=lambda: self.show_page("Page2"))
         self.page_btn.grid(row=1, column=0, padx=20, pady=40)
         
-        self.msg_btn = ctk.CTkButton(self, text="メッセージ表示", command=lambda: self.msg_output(1))
+        self.msg_btn = ctk.CTkButton(self, text="メッセージ表示", command=lambda: self.msg_output(1), **self.style.inline_btn)
         self.msg_btn.grid(row=1, column=1, padx=(0,20), pady=40)
         
     def msg_output(self, page_num:int) -> None:
@@ -76,7 +76,7 @@ class Page2(BasePage):
         self.page_btn = ctk.CTkButton(self, text="ページ１へ", command=lambda: self.show_page("Page1"))
         self.page_btn.grid(row=4, column=0, padx=20, pady=40)
         
-        self.msg_btn = ctk.CTkButton(self, text="idでデータ取得", command=lambda: self.msg_output(2))
+        self.msg_btn = ctk.CTkButton(self, text="idでデータ取得", command=lambda: self.msg_output(2), **self.style.inline_btn)
         self.msg_btn.grid(row=4, column=1, padx=(0,20), pady=40)
         
     def msg_output(self, page_num:int) -> None:
