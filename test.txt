@@ -1,0 +1,2 @@
+コマンドでテストを実行する場合、下記コマンドでソースコードフォルダのパスを設定する必要がある
+set PYTHONPATH="%PYTHONPATH%;C:\example_path\source_code"

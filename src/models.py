@@ -1,6 +1,7 @@
 import sqlite3
 from abc import ABC
 from typing import Optional
+import os
 
 # 接続DB名
 DB_NAME = 'sample.db'
@@ -14,7 +15,8 @@ class BaseModel(ABC):
     def connect(self) -> None:
         '''DBへの接続を開くメソッド'''
         try:
-            self.conn = sqlite3.connect(DB_NAME)
+            db_path = os.path.join('db', DB_NAME)   
+            self.conn = sqlite3.connect(db_path)
             self.cursor = self.conn.cursor()
             # ↓辞書型でフィールドデータを取得するための指定
             self.cursor.row_factory = sqlite3.Row
