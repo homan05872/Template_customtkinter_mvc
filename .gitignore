@@ -1,6 +1,13 @@
-__pycache__
+# vscodeの設定ファイル
 .vscode
 
-sample.db
+# python キャッシュ
+__pycache__
+.pytest_cache
 
+# sqlite3関係
+sample.db
+sample.db-journal
+
+# ローカルBKフォルダ
 bk
