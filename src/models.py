@@ -37,7 +37,7 @@ class DiaryModel(BaseModel):
     
     def get_all(self) -> list[sqlite3.Row]:
         '''Diaryテーブルから全てのデータを取得するメソッド'''
-        data = []
+        data = None
         try :
             # 接続を確立
             self.connect()

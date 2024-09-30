@@ -1,8 +1,7 @@
-from models import BaseModel
 from typing import Any
 
 class DiaryController:
-    def __init__(self, diary_model:BaseModel) -> None:
+    def __init__(self, diary_model:Any) -> None:
         # モデル変数用意
         self.diary_model = diary_model
 

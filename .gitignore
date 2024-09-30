@@ -11,3 +11,6 @@ sample.db-journal
 
 # ローカルBKフォルダ
 bk
+
+# デバッグ用ファイル
+debug.py
